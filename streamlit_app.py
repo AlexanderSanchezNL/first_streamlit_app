@@ -16,7 +16,9 @@ streamlit.dataframe(my_fruit_list)
 
 # Pick list
 # Choose a Few Fruits to Set a Good Example
-streamlit.multiselect("Pick some fruits:", list(my_fruit_list.Fruit),['Avocado','Strawberries'])
+# We'll ask our app to put the list of selected fruits into a variable called fruits_selected. 
+fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.Fruit),['Avocado','Strawberries'])
+fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # Display table
-streamlit.dataframe(my_fruit_list)
+streamlit.dataframe(fruits_to_show)
