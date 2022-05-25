@@ -42,8 +42,8 @@ try:
       streamlit.dataframe(back_from_function)
 # streamlit.write('The user entered', fruit_choice)
 
-#except URLError as e:
-#  streamlit.error()
+except URLError as e:
+  streamlit.error()
                       
 # import requests
 # take the json version of the response and normalize it
